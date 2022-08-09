@@ -1,0 +1,19 @@
+{
+    "name": "@petite-org/simple-pack",
+    "author": "Plawn",
+    "version": "1.0.1",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepublish": "tsc",
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "tslint": "^5.20.1",
+        "typescript": "^4.4.4"
+    },
+    "keywords": ["packer"],
+    "license": "ISC"
+}
