@@ -69,4 +69,34 @@ export type v1$1 = typeof v1$1;
 
 export const userQrCodeConvertor = new BasicStructConvertor([v1, v1$1]);
 
+
+const data = {
+    version: version: UserQrCodeSchema.v1$1,
+    token: "{token}",
+    fullName: "Plawn",
+    shortnerId: "{shortnerId}",
+    shortnerToken: "{shortnerToken}",
+}
+
+// The data transformed will be like :
+userQrCodeConvertor.to(data) // -> 1>{token}>Plawn>{shortnerId}>{shortnerToken}
+
+// and can be read back to the datastruct using:
+
+userQrCodeConvertor.to("1>{token}>Plawn>{shortnerId}>{shortnerToken}") // -> 
+/*
+{
+    version: version: UserQrCodeSchema.v1$1,
+    token: "{token}",
+    fullName: "Plawn",
+    shortnerId: "{shortnerId}",
+    shortnerToken: "{shortnerToken}",
+}
+*/
+
+
 ```
+
+
+
+
